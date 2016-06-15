@@ -11,7 +11,10 @@
 		<key>showInSymbolList</key>
 		<integer>1</integer>
 		<key>symbolTransformation</key>
-		<string>s/^\s*(it)\s+(.+)\s+do\s*$/  $2/</string>
+		<string>
+			s/\s*\z//g;        # strip trailing spaces
+			s/(\t|  )/ /g;     # convert tab or 2 spaces to a em space.
+		</string>
 	</dict>
 	<key>uuid</key>
 	<string>57EF6130-05A6-4117-94CB-C0BD63328334</string>
